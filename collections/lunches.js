@@ -28,7 +28,7 @@ LunchSchema = new SimpleSchema({
   },
   inMenu: {
     type: Boolean,
-    defaultValue: flase,
+    defaultValue: false,
     optional:true,
     autoform:{
       type:"hidden"
