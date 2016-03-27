@@ -1,4 +1,18 @@
-Lunches = new Meteor.Collection('recipes');
+Lunches = new Mongo.Collection('lunches');
+Lunches.allow({
+  insert: function(userId, doc){
+    return !!userId;
+  }
+});
+
+Ingredient = new SimpleSchema({
+  name:{
+    type: String
+  },
+  amount: {
+    type: String
+  }
+});
 
 LunchSchema = new SimpleSchema({
   name: {
@@ -8,6 +22,17 @@ LunchSchema = new SimpleSchema({
   desc: {
     type: String,
     label: "Description"
+  },
+  ingredients: {
+    type: [Ingredient]
+  },
+  inMenu: {
+    type: Boolean,
+    defaultValue: flase,
+    optional:true,
+    autoform:{
+      type:"hidden"
+    }
   },
   employee: {
     type: String,
