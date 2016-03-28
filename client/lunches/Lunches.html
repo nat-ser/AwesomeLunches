@@ -1,3 +1,11 @@
 <template name="Lunches">
   {{> NewLunch}}
+
+  <section class="lunches">
+    {{#if Template.subscriptionsReady}}
+      {{#each lunches}}
+          {{> Lunch}}
+      {{/each}}
+    {{/if}}
+  </section>
 </template>
