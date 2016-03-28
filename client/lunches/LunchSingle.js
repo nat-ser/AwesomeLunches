@@ -2,7 +2,8 @@
 Template.LunchSingle.onCreated(function(){
   var self= this;
   self.autorun(function(){
-    self.subscribe('lunches');
+    var id = FlowRouter.getParam('id');
+    self.subscribe('LunchSingle', id);
   });
 });
 Template.LunchSingle.helpers({
