@@ -67,7 +67,7 @@ Meteor.methods({
             }
         });
     },
-    deleteRecipe: function(id){
+    deleteLunch: function(id){
         Lunches.remove(id);
     }
 });
