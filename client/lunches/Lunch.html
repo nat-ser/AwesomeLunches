@@ -9,8 +9,11 @@
         </p>
         <a href="/lunch/{{_id}}">Details</a>
         <span>
-        <i class="toggle-menu btn-deny fa fa-times-circle fa-lg"></i>
-        <button class="toggle-menu btn-primary ">Add to Menu</button>
+          {{#if inMenu}}
+              <i class="toggle-menu btn-deny fa fa-times-circle fa-2x"></i>
+          {{else}}
+              <button class="toggle-menu btn-primary ">Add to Menu</button>
+          {{/if}}
       </span>
     </article>
 </template>
