@@ -1,4 +1,5 @@
 <template name="SideNav">
+  {{#if currentUser}}
 <nav class="side-nav">
   <ul>
     <li><a href="/lunch-box"><i class ="fa fa-cutlery"></i>My Lunches</a></li>
@@ -6,4 +7,5 @@
     <li><a href="/shopping-list"><i class ="fa fa-shopping-cart"></i>Shopping List</a></li>
   </ul>
 </nav>
+{{/if}}
 </template>

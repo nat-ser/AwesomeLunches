@@ -5,7 +5,7 @@ Template.ShoppingList.onCreated(function(){
   });
 });
 Template.ShoppingList.helpers({
-    shoppingList: ()=> {
+    shoppingList: function(){
     return Lunches.find({inMenu: true});
   }
 });

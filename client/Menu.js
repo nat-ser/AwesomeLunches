@@ -5,7 +5,7 @@ Template.Menu.onCreated(function(){
   });
 });
 Template.Menu.helpers({
-  lunches: ()=> {
+  lunches: function(){
     return Lunches.find({inMenu: true});
   }
 });

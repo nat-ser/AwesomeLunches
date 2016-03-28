@@ -6,7 +6,7 @@ Template.Lunches.onCreated(function(){
   });
 });
 Template.Lunches.helpers({
-  lunches: ()=> {
+  lunches: function(){
     return Lunches.find({});
   }
 });
