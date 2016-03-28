@@ -322,7 +322,9 @@ input, select, textarea
     z-index 1
     shadow-level(1)
     trans()
-    .btn-primary, .btn-deny
+    .btn-primary
+        display block
+    .btn-deny
         display block
     &.in-menu
         background light-yellow
@@ -330,6 +332,7 @@ input, select, textarea
         h3
             opacity: 0.7;
             border-bottom: rgba(255,255,255, 0.6) solid 3px
+
     h3
         font-size: 3em;
         opacity: 0.3;

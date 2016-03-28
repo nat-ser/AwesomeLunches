@@ -2,6 +2,9 @@ Lunches = new Mongo.Collection('lunches');
 Lunches.allow({
   insert: function(userId, doc){
     return !!userId;
+  },
+  update: function(userId, doc){
+    return !!userId;
   }
 });
 
@@ -54,6 +57,19 @@ LunchSchema = new SimpleSchema({
       type: "hidden"
     }
   }
+});
+
+Meteor.methods({
+    toggleMenuItem: function(id, currentState){
+        Lunches.update(id, {
+            $set: {
+                inMenu: !currentState
+            }
+        });
+    },
+    deleteRecipe: function(id){
+        Lunches.remove(id);
+    }
 });
 
 Lunches.attachSchema(LunchSchema);
