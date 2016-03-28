@@ -7,7 +7,7 @@ Template.LunchSingle.onCreated(function(){
   });
 });
 Template.LunchSingle.helpers({
-  lunch: ()=> {
+  lunch: () => {
     var id = FlowRouter.getParam('id');
     return Lunches.findOne({_id: id});
   }
